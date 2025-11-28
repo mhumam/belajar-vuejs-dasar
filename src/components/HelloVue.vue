@@ -15,7 +15,12 @@
     const dataMultipleAttribute = {
         id: "hello",
         class: "hello"
+    };
+
+    const helloFunction = () => {
+        return "Hello Function";
     }
+
 </script>
 
 <template>
@@ -31,6 +36,10 @@
 
     <h1 v-bind="dataMultipleAttribute">{{ helloMultipleAttributed }}</h1>
     <div :class="dataMultipleAttribute.class" v-html="helloMultipleAttributed"></div>
+    
+    <h1 v-bind="dataMultipleAttribute">{{ "JS Expression".toUpperCase() }}</h1>
+    <h2>{{ helloFunction() }}</h2>
+    <h2>{{ 500 * 100 }}</h2>
 </template>
 
 <style scoped>
