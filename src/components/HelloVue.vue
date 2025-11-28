@@ -7,16 +7,21 @@
     /* Directive class | v-bind:class, :class, :id */
     const classHello = "hello";
     const id = "id-name";
+
+    const buttonDisabled = true;
+    const buttonEnabled = false;
 </script>
 
 <template>
     <h1 class="hello">Hello Vue Component</h1>
     <h1 class="hello">{{hello}} (dipanggil dengan mustache, dirender sebagai string)</h1>
     <div v-html="vHtml"></div>
-
     
     <h1 :id v-bind:class="classHello">Memanggil class dengan directive class v-bind:class</h1>
     <div :class="classHello" v-html="hello"></div>
+
+    <button :disabled="buttonDisabled">Button disabled</button>
+    <button :disabled="buttonEnabled">Button enabled</button>
 </template>
 
 <style scoped>
